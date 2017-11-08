@@ -8,3 +8,4 @@
 * Next week we want to be able to work on our board and be less dependant on other peoples boards before we continue with coding.
 
 ## November 8th 2017 - Log 2
+* Kahyaps and Ali merged into the group
