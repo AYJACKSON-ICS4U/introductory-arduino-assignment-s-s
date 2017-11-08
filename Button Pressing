@@ -1,4 +1,5 @@
   /*Simple_PB_LED_V1   */
+  /* This is code that we know works that was programed and retrived throught the student files of Ms. Kirby's class*/
 
 const byte LEDpin = 3;
 const byte SWITCHpin = 2;
