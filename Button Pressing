@@ -1,16 +1,15 @@
-  /*Simple_PB_LED_V1   */
-  /* This is code that we know works that was programed and retrived throught the student files of Ms. Kirby's class*/
+        /*Simple_PB_LED_V1   */
 
 const byte LEDpin = 3;
 const byte SWITCHpin = 2;
 
-byte LEDstate = HIGH;
+byte LEDstate = LOW;
 
 void setup() {
   // put your setup code here, to run once:
 pinMode(LEDpin, OUTPUT);
 pinMode(SWITCHpin, INPUT);
-digitalWrite(SWITCHpin, LOW);
+digitalWrite(SWITCHpin, HIGH);
 }
 
 
