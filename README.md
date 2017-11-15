@@ -10,4 +10,8 @@
 
 ## November 8th 2017 - Log 2
 * We figured out our LED positive and negative were flipped by checking our buttons on another groups board and realizing that the positives and negatives do play a part
-* We realized the placements of the wires on either side of the button played a part in its functionality. We had one large wire traveling from 27 to 24 both on the ground side. We then changed to 27 on ground side to 22 on the opposite side if the button. Now out button WORKS!
+* We realized the placements of the wires on either side of the button played a part in its functionality. We had one large wire traveling from 27 to 24 both on the ground side. We then changed to 27 on ground side to 22 on the opposite side if the button. Now our button WORKS!
+
+## November 15th 2017 - Log 3
+* We fixed the LED high and low code to make the light switch more natural. Now when the button is pressed, the light turns on and when the button is released the light returns to it's original state (off).
+* We also worked on the toggle code and worked on analyzing and understanding each line. Notably, we focused on the delay, nested if statements and temps. Now our light changes state permanently when the button is clicked. We learned that delay allows it to work seemlessly. 
