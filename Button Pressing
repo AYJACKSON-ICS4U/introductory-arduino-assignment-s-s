@@ -1,20 +1,33 @@
         /*Simple_PB_LED_V1   */
 
-const byte LEDpin = 3;
-const byte SWITCHpin = 2;
+const byte LEDpin = 3;                  //D3 takes the current directly to the LED
+const byte SWITCHpin = 2;               //The D2 takes the current to the button where the button leads to the button. 
 
-byte LEDstate = LOW;
+byte LEDstate = HIGH;                   //button is on
+byte SWITCHstate;                       //holding place (temp)
+byte lastSWITCHstate;                   //holding place (temp)
 
 void setup() {
   // put your setup code here, to run once:
-pinMode(LEDpin, OUTPUT);
-pinMode(SWITCHpin, INPUT);
-digitalWrite(SWITCHpin, HIGH);
+pinMode(LEDpin, OUTPUT);                //use D3 to show if button is pressed
+pinMode(SWITCHpin, INPUT);              //use D2 for user input
+digitalWrite(SWITCHpin, HIGH);          //while D2 is true light is on
 }
 
 
 void loop() {
   // put your main code here, to run repeatedly:
-LEDstate = digitalRead(SWITCHpin);
-digitalWrite(LEDpin, !LEDstate);
+SWITCHstate = digitalRead(SWITCHpin);                           //setting the temp
+if ((lastSWITCHstate==HIGH) && (SWITCHstate==LOW))              //if the last switch and new switch are opposite 
+{
+        delay(1);                                               //creates a break in the program
+        SWITCHstate = digitalRead(SWITCHpin);                   //reset temp
+        if ((lastSWITCHstate==HIGH) && (SWITCHstate==LOW))      //if the last switch and new switch are opposite
+        {
+                LEDstate=!LEDstate;                             //inverse state of light
+                digitalWrite(LEDpin, LEDstate);                 //shows the on or off of light
+         }
+}
+
+lastSWITCHstate = SWITCHstate;                                  //updates last switch temp      
 }
