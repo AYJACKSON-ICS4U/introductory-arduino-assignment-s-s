@@ -16,3 +16,7 @@
 ## November 15th 2017 - Log 3
 * We fixed the LED high and low code to make the light switch more natural. Now when the button is pressed, the light turns on and when the button is released the light returns to it's original state (off).
 * We also worked on the toggle code and worked on analyzing and understanding each line. Notably, we focused on the delay, nested if statements and temps. Now our light changes state permanently when the button is clicked. We learned that delay allows it to work seemlessly. 
+
+## November 22nd 2017 - Log 4
+* We have added two pdf's containing information on how to set-up our boards to our repository so that we can easily access them in the future.
+* We have also started investigating how to add a second LED to our board. We noticed that our new light (the red light) always overrides the other light (the green light) when it's added to the board. Next week we would like to attempt to get both lights on at the same time and perhaps eventually involve the button (meaning the button could turn one light off and one light on).
