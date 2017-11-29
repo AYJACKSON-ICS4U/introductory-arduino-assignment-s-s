@@ -20,3 +20,7 @@
 ## November 22nd 2017 - Log 4
 * We have added two pdf's containing information on how to set-up our boards to our repository so that we can easily access them in the future.
 * We have also started investigating how to add a second LED to our board. We noticed that our new light (the red light) always overrides the other light (the green light) when it's added to the board. Next week we would like to attempt to get both lights on at the same time and perhaps eventually involve the button (meaning the button could turn one light off and one light on).
+
+## November 29nd 2017 - Log 5
+* Today we worked on removing the delay function and thought about how to create a new function that uses other things (ex. conditionals) to immitate the delay using miliseconds. 
+* We are also in the process of adding our second light. We learned that we should add the second LED to D4 instead of connecting it to D3 like the first light. We are now adding another pathway from D4 to the second LED. 
