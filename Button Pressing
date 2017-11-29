@@ -8,6 +8,8 @@ const byte LEDpin = 3;
 //The D2 takes the current to the button where the button leads to the button. 
 const byte SWITCHpin = 2;
 
+//lets us store 4 bytes in variable time
+unsigned long time;
 
 //this means the button is off
 byte LEDstate = LOW;
@@ -15,6 +17,9 @@ byte LEDstate = LOW;
 
 void setup() {
   // put your setup code here, to run once:
+ 
+  // sets the data rate to bits per second
+  Serial.begin(9600);
   
   //using the D3 to show if the button is being pressed (it will be off) 
 pinMode(LEDpin, OUTPUT);
@@ -28,5 +33,10 @@ digitalWrite(SWITCHpin, HIGH);
 void loop() {
   // put your main code here, to run repeatedly:
 LEDstate = digitalRead(SWITCHpin);
+
+time = millis();
+time = 500;
+delay(time);
+
 digitalWrite(LEDpin, !LEDstate);
 }
